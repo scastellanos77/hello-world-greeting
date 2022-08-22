@@ -8,7 +8,7 @@ stage('Build & Unit test'){
   archive 'target/*.jar'
 }
 stage('Static Code Analysis'){
-  sh 'mvn clean verify -Dsonar.projectName=example-project -Dsonar.projectKey=example-project -Dsonar.projectVersion=$BUILD_NUMBER';
+  sh 'pwd ';
 }
 stage ('Integration Test'){
   sh 'mvn clean verify -Dsurefire.skip=true';
